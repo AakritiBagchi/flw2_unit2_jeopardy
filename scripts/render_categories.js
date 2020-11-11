@@ -39,7 +39,7 @@ function renderCategories() {
         categories[i] +
         "</div></div>"
     );
-    categories.toUpperCase();
+    categories[i].toUpperCase();
   }
 }
 renderCategories();
