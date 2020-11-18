@@ -42,6 +42,7 @@ function attachClickHandlers() {
     $(questionElement).click(() => {
       // Add code here
         questionOnClick(categoryIndex, moneyValue);
+        setTimeout(function(){ answerOnClick(categoryIndex, moneyValue) }, 10000);
     });
   });
 }
