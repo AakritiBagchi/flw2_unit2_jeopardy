@@ -4,30 +4,30 @@
  * 1. Get the `#score` div to show up.
  *      HINT: Use the show() method in jQuery;
  *      Need more help? Check out https://api.jquery.com/show/ or ask a volunteer.
- * 
+ *
  * 2. Attach click handlers to `#correct-button` and `#incorrect-button` to update the score.
  *      HINT: Finish the `addToScore' and subtractFromScore` helper methods below first.
  *      Need more help? Ask a volunteer.
- * 
- * 3. Attach a click handler to `#question-modal-show-answer` which hides `#question-modal-actions` 
+ *
+ * 3. Attach a click handler to `#question-modal-show-answer` which hides `#question-modal-actions`
  *          and shows `#scoring-actions`.
  *      HINT: Use the `hide()` and `show()` methods in jQUery;
  *      Need more help? Check out https://api.jquery.com/ or ask a volunteer.
  */
 
 function renderScoringButtons() {
-    // Add code here
-    $("#score").show();
-    $("#correct-button").click(function(){
-        addToScore();
-    });
-    $("#incorrect-button").click(function(){
-        subtractFromScore();
-    });
-    $("#question-modal-show-answer").click(function(){
-        $("#question-modal-actions").hide();
-        $("#scoring-actions").show();
-    });
+  // Add code here
+  $("#score").show();
+  $("#correct-button").click(function () {
+    addToScore();
+  });
+  $("#incorrect-button").click(function () {
+    subtractFromScore();
+  });
+  $("#question-modal-show-answer").click(function () {
+    $("#question-modal-actions").hide();
+    $("#scoring-actions").show();
+  });
 }
 
 /* TODO: Program the following:
@@ -36,31 +36,28 @@ function renderScoringButtons() {
  * 1. Get the current score using getCurrentScore().
  *
  * 2. Compute the new score by adding or subtracting `currentQuestionValue`.
- * 
+ *
  * 3. Update the game with the new score.
  *      HINT: The score is in the '#current-score' span.
- * 
+ *
  * BONUS: Use getFormattedScore(score) to format your score before changing the text.
  *      HINT: Use the toUpperCase() function.
- *      TRIVIA: Why is it called UPPERCASE? 
+ *      TRIVIA: Why is it called UPPERCASE?
  *      Answer: https://bit.ly/3gOwrga
  *
  * BONUS 2: Move the common code from addToScore and subtractFromScore to a helper function!
  *      HINT: Compute the new score and then call the helper function.
-*/
+ */
 function addToScore() {
-    // Add code here
-    let currentScore = getCurrentScore();
-    currentScore = currentQuestionValue + currentScore;
-    $("#current-score").html(currentScore)
+  // Add code here
+  let currentScore = getCurrentScore();
+  currentScore = currentQuestionValue + currentScore;
+  $("#current-score").html(currentScore);
 }
 
 function subtractFromScore() {
-    // Add code here
-    currentScore = getCurrentScore();
-    currentScore = currentScore - currentQuestionValue;
-    $("#current-score").html(currentScore)
+  // Add code here
+  currentScore = getCurrentScore();
+  currentScore = currentScore - currentQuestionValue;
+  $("#current-score").html(currentScore);
 }
-
-
-
