@@ -17,13 +17,24 @@
 
 function renderScoringButtons() {
     // Add code here
+    $("#score").show();
+    $("#correct-button").click(function(){
+        addToScore();
+    });
+    $("#incorrect-button").click(function(){
+        subtractFromScore();
+    });
+    $("#question-modal-show-answer").click(function(){
+        $("#question-modal-actions").hide();
+        $("#scoring-actions").show();
+    });
 }
 
 /* TODO: Program the following:
  *  Update the score.
  *
  * 1. Get the current score using getCurrentScore().
- * 
+ *
  * 2. Compute the new score by adding or subtracting `currentQuestionValue`.
  * 
  * 3. Update the game with the new score.
@@ -37,10 +48,19 @@ function renderScoringButtons() {
  * BONUS 2: Move the common code from addToScore and subtractFromScore to a helper function!
  *      HINT: Compute the new score and then call the helper function.
 */
-function subtractFromScore() {
-    // Add code here
-}
-
 function addToScore() {
     // Add code here
+    let currentScore = getCurrentScore();
+    currentScore = currentQuestionValue + currentScore;
+    $("#current-score").html(currentScore)
 }
+
+function subtractFromScore() {
+    // Add code here
+    currentScore = getCurrentScore();
+    currentScore = currentScore - currentQuestionValue;
+    $("#current-score").html(currentScore)
+}
+
+
+

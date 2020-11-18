@@ -42,4 +42,3 @@ function renderCategories() {
     categories[i].toUpperCase();
   }
 }
-renderCategories();
